@@ -1,7 +1,7 @@
 import React from "react";
 
 function Potato(){
-    return <h3>I love you</h3>
+    return <div>I like Potato</div>
 }
 
 export default Potato;

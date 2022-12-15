@@ -1,30 +1,40 @@
 import React from 'react';
 import Potato from './Potato';
 
-function Food({name}) {
-return <h1> I like {name} </h1> ;
+function Food({name, picture}) {
+return (
+  <div>
+   <h2> I like {name} </h2> 
+   <img src = {picture} />
+  </div>
+);
 }
 
 const foodLike = [
 {
  name : 'Kimchi',
- image : 'https://www.google.co.kr/url?sa=i&url=https%3A%2F%2Fwww.maangchi.com%2Frecipe%2Ftongbaechu-kimchi&psig=AOvVaw1qa737OufSAzmce9Jbvn67&ust=1671199717850000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCKi1rqPm-_sCFQAAAAAdAAAAABAD',
+ image : 'https://recipe1.ezmember.co.kr/cache/recipe/2020/10/14/954d0e47cad6ce0f6bda194b5a4075b21.jpg'
+,
 },
 {
   name : 'SamgYeopsal',
-  image : 'https://www.google.co.kr/url?sa=i&url=https%3A%2F%2Fwww.honestfoodtalks.com%2Fsamgyeopsal-korean-grilled-pork-belly%2F&psig=AOvVaw0RNRzNMp_4ap3QE9Qez6y8&ust=1671199756265000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOjDlLHm-_sCFQAAAAAdAAAAABAD',
+  image : 'https://gildedgingerbread.com/wp-content/uploads/2017/08/Samgyeopsal-1.jpg'
+,
 },
 {
   name : 'Bibimbap',
-  image : 'https://www.google.co.kr/url?sa=i&url=https%3A%2F%2Fwww.maangchi.com%2Frecipe%2Fbibimbap&psig=AOvVaw2R_w46mG0LUzEJM3Q-t1s_&ust=1671199774335000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCICLtrnm-_sCFQAAAAAdAAAAABAH',
+  image : 'https://file.mk.co.kr/meet/neds/2022/06/image_readtop_2022_556024_16560682015086908.jpg'
+,
 },
 {
   name : 'Doncasu',
-  image : 'https://www.google.co.kr/url?sa=i&url=https%3A%2F%2Ftwitter.com%2Fhashtag%2F%25EC%259D%25B4_%25ED%2595%25B4%25EC%258B%259C%25EB%25A5%25BC_%25EB%25B4%25A4%25EB%258B%25A4%25EB%25A9%25B4_%25EA%25B3%2584%25EC%25A0%2595_%25EC%25A3%25BC%25EC%25A0%259C_%25EB%25A7%2590%25ED%2595%2598%25EA%25B8%25B0&psig=AOvVaw32PM7d_4dkzW4rmbBJ3WXO&ust=1671199795204000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCMjB-8Pm-_sCFQAAAAAdAAAAABAQ',
+  image : 'https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1648853795624783235d00c_75_75.jpeg'
+,
 },
 {
   name : 'Kimbap',
-  image : 'https://www.google.co.kr/url?sa=i&url=https%3A%2F%2Fwww.lafujimama.com%2Fblta-kimbap%2F&psig=AOvVaw2Okh987Ya-4_fDDz_VhfL6&ust=1671199823472000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCMj3vNLm-_sCFQAAAAAdAAAAABAD',
+  image : 'https://recipe1.ezmember.co.kr/cache/recipe/2016/02/21/f34c2f0fcd67513941d683d90050f3c01.jpg'
+,
 }
 ];
 
@@ -32,7 +42,7 @@ const foodLike = [
 function App() {
 return (
 <div>
- {foodLike.map(dish => (<Food name = {dish.name} />))}
+ {foodLike.map(dish => (<Food name = {dish.name} picture = {dish.image} />))}
 </div>
 );
 }
